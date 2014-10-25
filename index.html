@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JavaScript练习</title>
+</head>
+
+<body>
+    <h1 id="h1">明天休息</h1>
+    <ul>
+        <li id="bj" value="beijing">
+            北京
+            <p>海淀</p>
+            奥运
+        </li>
+        <li id="sh" value="shanghai">上海</li>
+    </ul>
+</body>
+<script type="text/javascript">
+    //方法一利用firstchild输出“明天休息”
+    //var h1Element = document.getElementById("h1");
+    //alert(h1Element.firstChild.nodeValue);
+    //方法二利用childNode表示父元素下的所有的子元素（数组）
+    //var h1Element = document.getElementById("h1");
+    //alert(h1Element.childNodes[0].nodeValue);
+    //打印出id="bj"该节点的所有子节点的（nodeName,nodeType,nodeValue）
+    var bjElement = document.getElementById("bj");
+    //var bjText = bjElement.firstChild;
+    /*alert(bjText.nodeName);
+    alert(bjText.nodeType);
+    alert(bjText.nodeValue);*/
+    //<p>海淀</p>
+    /*var pElement = bjElement.childNodes[1];
+    alert(pElement.nodeName);
+    alert(pElement.nodeType);
+    alert(pElement.nodeValue);*/
+    //奥运
+    var ayElement = bjElement.lastchild;
+    alert(ayElement.nodeName);
+    alert(ayElement.nodeType);
+    alert(ayElement.nodeValue);
+    //同时打印文本值 北京，海淀 奥运
+</script>
+</html>
